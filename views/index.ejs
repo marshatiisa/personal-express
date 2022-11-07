@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="/css/style.css">
+  </head>
+  <body> 
+    <main>
+      <h1>Coin Flip Game </h1>
+      <form action="/flip" method="post">
+    <input id="userChoice" type="text" name="userChoice" placeholder="Enter">
+    <input id="clickMe" type="submit" name="button"></input>
+    </form>
+    <% if(typeof userChoice !== 'undefined'){%>
+    <div id="coin">
+      <div id="sidea"></div>
+      <div id="sideb"></div>
+    </div>
+    <h2>Your guess was: <span id="flip"><%=userChoice%></span></h2>
+    <h2>The coin landed on: <span id="flip"><%=flipResult%></span></h2>
+    <% }%>
+    </main>
+  </body>
+</html>
